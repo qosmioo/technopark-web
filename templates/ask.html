@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-sm-fluid container-lg">
+        <a class="navbar-brand">AskFedor</a>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="d-flex justify-content-between gap-3">
+          <div class="border">
+            <img src="../static/img/WIN_20230707_01_29_37_Pro.jpg" width="50" height="50" />
+          </div>
+          <div class="d-flex flex-column justify-content-between">
+            <div>qosmio</div>
+            <div>
+              <a href="/settings.html">Settings</a>
+              <a href="/logout.html">Log out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container-fluid container-lg">
+      <div class="mb-2"><h1>New Question</h1></div>
+      <div class="row">
+        <div class="col-8">
+          <div class="d-flex gap-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label mt-1">Title</label>
+            <textarea class="form-control ms-3" id="exampleFormControlTextarea1" rows="1">How to build a moon park?</textarea>
+          </div>
+          <div class="d-flex gap-3 mt-3">
+            <label for="exampleFormControlTextarea2" class="form-label mt-1">Text</label>
+            <textarea class="form-control ms-3" id="exampleFormControlTextarea2" rows="10">Really, how? Have no idea about it</textarea>
+          </div>
+          <div class="d-flex gap-3 mt-3">
+            <label for="exampleFormControlTextarea3" class="form-label mt-1">Tags</label>
+            <textarea class="form-control ms-3" id="exampleFormControlTextarea3" rows="1">moon, park, puzzle</textarea>
+          </div>
+          <button type="button" class="btn btn-outline-success mt-3" style="margin-left: 62px">Success</button>
+        </div>
+        <div class="col-4">
+          <h3>Popular Tags</h3>
+          <div class="row mt-1">
+            <div class="col">
+              <span class="badge text-bg-primary">perl</span>
+              <span class="badge text-bg-secondary">python</span>
+              <span class="badge text-bg-success">TechnoPark</span>
+              <span class="badge text-bg-danger">MySQL</span>
+              <span class="badge text-bg-warning">django</span>
+              <span class="badge text-bg-info">Mail.Ru</span>
+              <span class="badge text-bg-light">Voloshin</span>
+              <span class="badge text-bg-dark">Firefox</span>
+            </div>
+          </div>
+          <h3 class="mt-5">Best Members</h3>
+          <div>
+            <a href="/member.html" class="d-block">Mr. Freeman</a>
+            <a href="/member.html" class="d-block">Dr. House</a>
+            <a href="/member.html" class="d-block">Bender</a>
+            <a href="/member.html" class="d-block">Queen Victoria</a>
+            <a href="/member.html" class="d-block">V. Pupkin</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
