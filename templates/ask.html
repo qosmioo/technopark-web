@@ -17,11 +17,12 @@
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success me-2" type="submit">Search</button>
+          <button class="btn btn-success" type="submit">Ask!</button>
         </form>
         <div class="d-flex justify-content-between gap-3">
           <div class="border">
-            <img src="../static/img/WIN_20230707_01_29_37_Pro.jpg" width="50" height="50" />
+            <img src="../static/img/img.png" width="50" height="50" />
           </div>
           <div class="d-flex flex-column justify-content-between">
             <div>qosmio</div>
@@ -37,19 +38,26 @@
       <div class="mb-2"><h1>New Question</h1></div>
       <div class="row">
         <div class="col-8">
-          <div class="d-flex gap-3 mt-3">
-            <label for="exampleFormControlTextarea1" class="form-label mt-1">Title</label>
-            <textarea class="form-control ms-3" id="exampleFormControlTextarea1" rows="1">How to build a moon park?</textarea>
+          <p class="text-danger">Text form is empty!</p>
+          <div class="row mb-3">
+            <label for="inputTitle" class="col-sm-1 col-form-label">Title</label>
+            <div class="col-sm-11">
+              <input type="text" class="form-control" id="inputTitle" placeholder="Enter title...">
+            </div>
           </div>
-          <div class="d-flex gap-3 mt-3">
-            <label for="exampleFormControlTextarea2" class="form-label mt-1">Text</label>
-            <textarea class="form-control ms-3" id="exampleFormControlTextarea2" rows="10">Really, how? Have no idea about it</textarea>
+          <div class="row mb-3">
+            <label for="inputText" class="col-sm-1 col-form-label">Text</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" id="InputText" rows="8" placeholder="Enter your question here..."></textarea>
+            </div>
           </div>
-          <div class="d-flex gap-3 mt-3">
-            <label for="exampleFormControlTextarea3" class="form-label mt-1">Tags</label>
-            <textarea class="form-control ms-3" id="exampleFormControlTextarea3" rows="1">moon, park, puzzle</textarea>
+          <div class="row mb-3">
+            <label for="inputTags" class="col-sm-1 col-form-label">Tags</label>
+            <div class="col-sm-11">
+              <input type="text" class="form-control" id="inputTags" placeholder="Enter tags...">
+              <button type="button" class="btn btn-outline-success mt-3">Ask!</button>
+            </div>
           </div>
-          <button type="button" class="btn btn-outline-success mt-3" style="margin-left: 62px">Success</button>
         </div>
         <div class="col-4">
           <h3>Popular Tags</h3>
@@ -76,5 +84,10 @@
         </div>
       </div>
     </main>
+    <footer class="fixed-bottom p-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Contact us via mail: askme@gmail.com</span>
+      </div>
+    </footer>
   </body>
 </html>

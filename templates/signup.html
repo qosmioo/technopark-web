@@ -27,26 +27,47 @@
       </div>
     </nav>
       <main class="container-fluid container-lg">
-        <div class="mb-2"><h1>Log in</h1></div>
+        <div class="mb-2"><h1>Registration</h1></div>
         <div class="row">
           <div class="col-8">
-            <p class="text-danger">Sorry, wrong password!</p>
+            <p class="text-danger">Sorry, this email address already taken!</p>
             <div class="row mb-3">
               <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputLogin" style="width: 250px">
               </div>
             </div>
-
+            <div class="row mb-3">
+              <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail"  style="width: 250px">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputNickname" class="col-sm-3 col-form-label">NickName</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="inputNickname"  style="width: 250px">
+              </div>
+            </div>
             <div class="row mb-3">
               <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
               <div class="col-sm-9">
                 <input type="password" class="form-control" id="inputPassword"  style="width: 250px">
-                <button type="button" class="btn btn-success mt-3 mb-1">Log in!</button>
-                <p><a href="signup.html">create new account</a></p>
               </div>
             </div>
-
+            <div class="row mb-3">
+              <label for="inputRepeatPassword" class="col-sm-3 col-form-label">Repeat password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="inputRepeatPassword"  style="width: 250px">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputFile" class="col-sm-3 col-form-label">Upload avatar</label>
+              <div class="col-sm-9">
+                <input type="file" class="form-control" id="inputFile"  style="width: 250px">
+                <button type="button" class="btn btn-success mt-3">Success</button>
+              </div>
+            </div>
 
           </div>
         <div class="col-4">
