@@ -1,83 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/index.css">
-  </head>
-  <body>
-    <nav class="navbar bg-body-tertiary" style="height: 67.6px">
-      <div class="container-sm-fluid container-lg">
-        <a class="navbar-brand">AskFedor</a>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <div class="d-flex align-content-center">
-          <div>
-            <a href="/login.html">Log in</a>
-            <a href="/signup.html">Register</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-      <main class="container-fluid container-lg">
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="col-8">
         <div class="mb-2"><h1>Log in</h1></div>
-        <div class="row">
-          <div class="col-8">
-            <p class="text-danger">Sorry, wrong password!</p>
-            <div class="row mb-3">
-              <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="inputLogin" style="width: 250px">
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
-              <div class="col-sm-9">
-                <input type="password" class="form-control" id="inputPassword"  style="width: 250px">
-                <button type="button" class="btn btn-success mt-3 mb-1">Log in!</button>
-                <p><a href="signup.html">create new account</a></p>
-              </div>
-            </div>
-
-
-          </div>
-        <div class="col-4">
-          <h3>Popular Tags</h3>
-          <div class="row mt-1">
-            <div class="col">
-              <span class="badge text-bg-primary">perl</span>
-              <span class="badge text-bg-secondary">python</span>
-              <span class="badge text-bg-success">TechnoPark</span>
-              <span class="badge text-bg-danger">MySQL</span>
-              <span class="badge text-bg-warning">django</span>
-              <span class="badge text-bg-info">Mail.Ru</span>
-              <span class="badge text-bg-light">Voloshin</span>
-              <span class="badge text-bg-dark">Firefox</span>
-            </div>
-          </div>
-          <h3 class="mt-5">Best Members</h3>
-          <div>
-            <a href="/member.html" class="d-block">Mr. Freeman</a>
-            <a href="/member.html" class="d-block">Dr. House</a>
-            <a href="/member.html" class="d-block">Bender</a>
-            <a href="/member.html" class="d-block">Queen Victoria</a>
-            <a href="/member.html" class="d-block">V. Pupkin</a>
+        <p class="text-danger">Sorry, wrong password!</p>
+        <div class="row mb-3">
+          <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputLogin" style="width: 250px">
           </div>
         </div>
+    
+        <div class="row mb-3">
+          <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword"  style="width: 250px">
+            <button type="button" class="btn btn-success mt-3 mb-1">Log in!</button>
+            <p><a href="signup.html">create new account</a></p>
+          </div>
+        </div>    
       </div>
-    </main>
-    <footer class="fixed-bottom p-3 bg-light">
-      <div class="container">
-        <span class="text-muted">Contact us via mail: askme@gmail.com</span>
-      </div>
-    </footer>
-  </body>
-</html>
+{% endblock %}

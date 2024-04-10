@@ -1,9 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
     <div class="col-8">
-            <div class="mb-2"><h1>Registration</h1></div>
-            <p class="text-danger">Sorry, this email address already taken!</p>
+            <div class="mb-2"><h1>Settings: qosmio</h1></div>
             <div class="row mb-3">
               <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
               <div class="col-sm-9">
@@ -23,17 +22,11 @@
               </div>
             </div>
             <div class="row mb-3">
-              <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
-              <div class="col-sm-9">
-                <input type="password" class="form-control" id="inputPassword"  style="width: 250px">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="inputRepeatPassword" class="col-sm-3 col-form-label">Repeat password</label>
-              <div class="col-sm-9">
-                <input type="password" class="form-control" id="inputRepeatPassword"  style="width: 250px">
-              </div>
-            </div>
+                <div class="border" style="width: 50px; height: 50px"> 
+                    <img src="../static/img/img.png" width="50" height="50" alt="..."
+                />
+          </div>
+            </div>>
             <div class="row mb-3">
               <label for="inputFile" class="col-sm-3 col-form-label">Upload avatar</label>
               <div class="col-sm-9">

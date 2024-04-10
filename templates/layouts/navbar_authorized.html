@@ -1,0 +1,29 @@
+{% load static %}
+<nav class="navbar bg-body-tertiary">
+      <div class="container-sm-fluid container-lg">
+        <a class="navbar-brand" href="\">AskFedor</a>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                <a href="{% url "ask" %}" class="btn btn-info" role="button">Ask!</a>
+              
+        </form>
+        <div class="d-flex justify-content-between gap-3">
+          <div class="border">
+            <img src="../static/img/img.png" width="50" height="50" />
+          </div>
+          <div class="d-flex flex-column justify-content-between">
+            <div>qosmio</div>
+            <div>
+              <a href="{% url 'settings' %}">Settings</a>
+              <a href="{% url 'login' %}">Log out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
