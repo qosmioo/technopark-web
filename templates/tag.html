@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="mb-2"><h1>Tag: {{ tag_name }}</h1></div>
+<div class="mb-2"><h1>Tag: {{ tag.name }}</h1></div>
     <div class="col-8">
         {% for question in questions %}
             {% include "layouts/question_card.html" with item=question %}

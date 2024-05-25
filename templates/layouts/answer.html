@@ -1,0 +1,30 @@
+{% load static %}
+<article class="card mb-3 w-90">
+    <div class="row g-0">
+      <div class="col-2 p-3">
+        <div class="border rounded mb-3" style="height: 80px; width: 80px">
+          <img
+            src="../static/img/img.png"
+            class="img-fluid rounded avatar-width h-100"
+            alt="..."
+          />
+        </div>
+        <div class="input-group flex-nowrap input-group-width">
+          <input type="number" value="5" class="form-control" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-body ps-0">
+          <p class="card-text">
+              {{ answer.text }}
+          </p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+            <label class="form-check-label ms-1" for="flexCheckDefault1">
+              Correct!
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>

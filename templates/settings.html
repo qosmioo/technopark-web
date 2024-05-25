@@ -1,39 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="col-8">
-            <div class="mb-2"><h1>Settings: qosmio</h1></div>
-            <div class="row mb-3">
-              <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="inputLogin" style="width: 250px">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
-              <div class="col-sm-9">
-                <input type="email" class="form-control" id="inputEmail"  style="width: 250px">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="inputNickname" class="col-sm-3 col-form-label">NickName</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="inputNickname"  style="width: 250px">
-              </div>
-            </div>
-            <div class="row mb-3">
-                <div class="border" style="width: 50px; height: 50px"> 
-                    <img src="../static/img/img.png" width="50" height="50" alt="..."
-                />
-          </div>
-            </div>>
-            <div class="row mb-3">
-              <label for="inputFile" class="col-sm-3 col-form-label">Upload avatar</label>
-              <div class="col-sm-9">
-                <input type="file" class="form-control" id="inputFile"  style="width: 250px">
-                <button type="button" class="btn btn-success mt-3">Success</button>
-              </div>
-            </div>
-
-          </div>
+    <div class="col-8 mt-3">
+    <form action="{% url 'settings' %}?continue={{ continue_url }}" method="POST" enctype="multipart/form-data">
+        {% include 'layouts/form.html' with is_columns=True %}
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6"><img class="avatar-lg" src="{{ request.user.profile.avatar.url }}"></div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Изменить</button>
+    </form>
+    </div>
 {% endblock %}

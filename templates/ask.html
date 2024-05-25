@@ -4,25 +4,9 @@
 {% block content %}
 <div class="mb-2"><h1>New Question</h1></div>
     <div class="col-8">
-      <p class="text-danger">Text form is empty!</p>
-      <div class="row mb-3">
-        <label for="inputTitle" class="col-sm-1 col-form-label">Title</label>
-        <div class="col-sm-11">
-          <input type="text" class="form-control" id="inputTitle" placeholder="Enter title...">
-        </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputText" class="col-sm-1 col-form-label">Text</label>
-        <div class="col-sm-11">
-          <textarea class="form-control" id="InputText" rows="8" placeholder="Enter your question here..."></textarea>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputTags" class="col-sm-1 col-form-label">Tags</label>
-        <div class="col-sm-11">
-          <input type="text" class="form-control" id="inputTags" placeholder="Enter tags...">
-          <button type="button" class="btn btn-outline-success mt-3">Ask!</button>
-        </div>
-      </div>
+      <form action="{% url 'ask' %}" method="POST">
+        {% include 'layouts/form.html' %}
+        <button type="submit" class="btn btn-primary">Задать вопрос</button>
+    </form>
     </div>
 {% endblock %}

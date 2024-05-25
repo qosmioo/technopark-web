@@ -1,0 +1,23 @@
+{% for error in form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+        <strong>Ошибка!</strong> {{ error }}
+    </div>
+{% endfor %}
+
+{% csrf_token %}
+{% for field in form %}
+    <div class="form-group {% if is_columns %}row{% endif %} {% if field.errors %}has-danger{% endif %}">
+        {% if field.label != '' %}
+            <label class="{% if is_columns %}col-md-3{% endif %} col-form-label">{{ field.label }}</label>
+        {% endif %}
+        <div class="{% if is_columns %}col-md-6{% endif %}">
+            {{ field }}
+
+            {% for error in field.errors %}
+                <div class="form-control-feedback">{{ error }}</div>
+            {% endfor %}
+        
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+        </div>
+    </div>
+{% endfor %}

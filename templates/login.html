@@ -2,23 +2,29 @@
 {% load static %}
 
 {% block content %}
-    <div class="col-8">
-        <div class="mb-2"><h1>Log in</h1></div>
-        <p class="text-danger">Sorry, wrong password!</p>
-        <div class="row mb-3">
-          <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="inputLogin" style="width: 250px">
-          </div>
-        </div>
     
-        <div class="row mb-3">
-          <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
-          <div class="col-sm-9">
-            <input type="password" class="form-control" id="inputPassword"  style="width: 250px">
-            <button type="button" class="btn btn-success mt-3 mb-1">Log in!</button>
-            <p><a href="signup.html">create new account</a></p>
-          </div>
-        </div>    
+    <div class="col-8 mt-3">
+    <form action="{% url 'login' %}?continue={{ continue_url }}" method="POST">
+        {% include 'layouts/form.html' with is_columns=True %}
+        <button type="submit" class="btn btn-primary">Войти</button>
+        <a href="{% url 'signup' %}?continue={{ continue_url }}" class="btn btn-link">Регистрация</a>
+    </form>
+{#        <div class="mb-2"><h1>Log in</h1></div>#}
+{#        <p class="text-danger">Sorry, wrong password!</p>#}
+{#        <div class="row mb-3">#}
+{#          <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>#}
+{#          <div class="col-sm-9">#}
+{#            <input type="text" class="form-control" id="inputLogin" style="width: 250px">#}
+{#          </div>#}
+{#        </div>#}
+{##}
+{#        <div class="row mb-3">#}
+{#          <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>#}
+{#          <div class="col-sm-9">#}
+{#            <input type="password" class="form-control" id="inputPassword"  style="width: 250px">#}
+{#            <button type="button" class="btn btn-success mt-3 mb-1">Log in!</button>#}
+{#            <p><a href="signup.html">create new account</a></p>#}
+{#          </div>#}
+{#        </div>    #}
       </div>
 {% endblock %}

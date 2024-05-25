@@ -14,8 +14,8 @@
         </form>
         <div class="d-flex align-content-center">
           <div>
-            <a href="{% url 'login' %}">Log in</a>
-            <a href="{% url 'signup' %}">Register</a>
+            <a href="{% url 'login' %}?continue={{ request.path }}">Log in</a>
+            <a href="{% url 'signup' %}?continue={{ request.path }}">Register</a>
           </div>
         </div>
       </div>
